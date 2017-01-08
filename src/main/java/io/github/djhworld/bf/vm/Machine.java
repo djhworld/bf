@@ -46,10 +46,10 @@ public class Machine {
                     readChar(operation.argument);
                     break;
                 case JUMP_IF_ZERO:
-                    if (read() == 0) instructionPointer = operation.argument;
+                    if (read() == 0) jump(operation.argument);
                     break;
                 case JUMP_IF_NOT_ZERO:
-                    if (read() != 0) instructionPointer = operation.argument;
+                    if (read() != 0) jump(operation.argument);
                     break;
             }
 
@@ -90,5 +90,9 @@ public class Machine {
 
     private void decrement(int by) {
         memory[dataPointer] -= by;
+    }
+
+    private void jump(int to) {
+        instructionPointer = to;
     }
 }

@@ -149,6 +149,9 @@ public class MachineTest {
         assertEquals((byte) 15, machineMemory[1]);
     }
 
+    // Tests below are based on programs written by daniel b cristofani www.hevanet.com/cristofd/brainfuck/
+    // helloworld.b was taken from wikipedia 
+    // I'm using them as a testbed to test the validity of the machine
 
     @Test
     public void shouldExecuteHelloWorld() throws Exception {
